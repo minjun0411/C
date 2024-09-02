@@ -9,7 +9,7 @@ int main()
     srand(time(NULL));
     
     for(int i = 0; i<10; i++){
-        number[i] = (rand() % 100) + i;
+        number[i] = (rand() % 100) + 1;
     }
     
     for(int i = 0; i<10; i++){
