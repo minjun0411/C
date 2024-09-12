@@ -58,15 +58,9 @@ int main() {
 
     for (int i = 0; i < num; i++) {
         list[i] = store[i] - sale[i];
-
-        // 판매율 계산 (입고량이 0일 경우, 0으로 처리)
-        if (store[i] != 0) {
-            sales_rate = ((float)sale[i] / store[i]) * 100;
-        }
-        else {
-            sales_rate = 0;
-        }
     }
+    sales_rate = ((float)sale[i] / store[i]) * 100;
+    
     printf("id 입력 : ");
     if (scanf("%d", &id) != 1) {
         printf("잘못된 입력입니다.\n");
