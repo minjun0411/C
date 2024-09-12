@@ -59,8 +59,8 @@ int main() {
     for (int i = 0; i < num; i++) {
         list[i] = store[i] - sale[i];
     }
-    sales_rate = ((float)sale[i] / store[i]) * 100;
-    
+
+
     printf("id 입력 : ");
     if (scanf("%d", &id) != 1) {
         printf("잘못된 입력입니다.\n");
@@ -77,6 +77,14 @@ int main() {
     {
         printf("%d ", list[i]);
     }
+
+    float a = 0, b = 0;
+    for (int i = 0; i<num;i++){
+        a += sale[i];
+        b += store[i];
+    }
+
+    sales_rate = a/b*100;
 
     printf("\n총 판매량 : %d (판매율 %.2f%% )\n", total_sales, sales_rate);
 
