@@ -13,11 +13,11 @@ int main()
     FILE* fp_src;
     FILE* fp_dest;
     
-    if((fp = fopen("output.txt", "w")) == NULL){
+    if((fp_src = fopen("output.txt", "w")) == NULL){
         printf("error...");
         return 0;
     }
-    if((fp = fopen("output2.txt", "w")) == NULL){
+    if((fp_dest = fopen("output2.txt", "w")) == NULL){
         printf("error...");
         return 0;
     }
