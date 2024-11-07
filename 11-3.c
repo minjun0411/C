@@ -16,19 +16,14 @@ int inputMenu(void){
 int main()
 {
     int menu;
-    POINT pt;
     
     do{
         menu = inputMenu();
         if(menu == 1){
-            printf("구조체의 x 값을 입력하세요: ");
-            scanf("%d", &pt.x);
-            printf("구조체의 y 값을 입력하세요: ");
-            scanf("%d", &pt.y);
+            //구조체 만들기
         }
         else if(menu ==2){
-            printf("구조체의 x 값: %d\n", pt.x);
-            printf("구조체의 y 값: %d\n", pt.y);
+            //구조체 출력
         }
         else if(menu == -1){
             printf("프로그램을 종료합니다.\n");
@@ -37,3 +32,19 @@ int main()
     
     return 0;
 }
+/*
+POINT* point;
+    int count;
+    scanf("%d", &count);
+    
+    points = (POINT*)malloc(sizeof(POINT) * count);
+    
+    for(int i = 0; i< count;i++){
+        points[i].x = rand() % 100;
+        points[i].y = rand() % 100;
+    }
+    for(int i = 0;i<count;i++){
+        printf("x - %d, y - %d\n", points[i].x, points[i].y);
+    }
+    free(points);
+*/
